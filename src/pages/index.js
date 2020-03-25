@@ -345,7 +345,9 @@ class IndexPage extends React.Component {
                       <div key={index} className="filter-widget__card">
                         <Image className="card__photo card__photo--short" fluid={obj.node.photo.fluid} alt="logo"/>
                         <div className="card__details">
-                          <h5 className="card__text mt-2 mb-2">{obj.node.name}</h5>
+                          <div className="card__text mr-1">
+                            <h5 className="card__name mt-2 mb-2">{obj.node.name}</h5>
+                          </div>
                         </div>
                       </div>
                     );
