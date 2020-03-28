@@ -387,9 +387,9 @@ class IndexPage extends React.Component {
                   let minuteEnd = parseInt(endTime.substring(14,16));
 
                   return (
-                    <div key={index} className="event mb-4">
+                    <div key={index} className="event mb-2">
                       <h3 className="event__title">{month}.{day} | {obj.node.title}</h3>
-                      <h6 className="event__subtitle mt-1 mb-2">{(hourBegin === 0 || hourBegin === 12) ? '12' : (hourBegin % 12)}:{(minuteBegin < 10) ? ('0' + minuteBegin) : minuteBegin} {(hourBegin >= 12) ? 'PM' : 'AM'} - {(hourEnd === 0 || hourEnd === 12) ? '12' : (hourEnd % 12) % 12}:{(minuteEnd < 10) ? ('0' + minuteEnd) : minuteEnd} {(hourEnd >= 12) ? 'PM' : 'AM'} at {obj.node.location}</h6>
+                      <h6 className="event__subtitle mt-1 mb-1">{(hourBegin === 0 || hourBegin === 12) ? '12' : (hourBegin % 12)}:{(minuteBegin < 10) ? ('0' + minuteBegin) : minuteBegin} {(hourBegin >= 12) ? 'PM' : 'AM'} - {(hourEnd === 0 || hourEnd === 12) ? '12' : (hourEnd % 12) % 12}:{(minuteEnd < 10) ? ('0' + minuteEnd) : minuteEnd} {(hourEnd >= 12) ? 'PM' : 'AM'} at {obj.node.location}</h6>
                       <p className="event__desc">{obj.node.description}</p>
                     </div>
                   )
