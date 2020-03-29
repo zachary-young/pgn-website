@@ -94,7 +94,7 @@ class Navbar extends React.Component {
               <a href="#rush" className="navbar__rush-link"><h4 className="navbar__link">RUSH</h4></a>
               <a href="#rush" className="navbar__rush-button"><button className="navbar__button">RUSH</button></a>
             </div>
-            <button className="navbar__toggle" onClick={this.handleToggle}>
+            <button title="Navigation bar toggle" className="navbar__toggle" onClick={this.handleToggle}>
               <div className="toggle__bar" id="top-bar"></div>
               <div className="toggle__bar" id="middle-bar"></div>
               <div className="toggle__bar" id="bottom-bar"></div>
