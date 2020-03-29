@@ -50,9 +50,9 @@ class Gallery extends React.Component {
     this.galleryCount = Object.keys(galleryData).length;
     return (
       <div className="gallery-wrapper">
-        <button className="gallery-button" onClick={() => this.handleGalleryClick(true)}><FontAwesomeIcon icon={faChevronLeft} size="4x" /></button>
+        <button className="gallery-button" onClick={() => this.handleGalleryClick(true)}><FontAwesomeIcon title="Left gallery Button" icon={faChevronLeft} size="4x" /></button>
         <Image className="section__image mr-1 ml-1" fluid={galleryData[this.state.galleryIndex].node.photo.fluid} alt="logo"/>
-        <button className="gallery-button" onClick={() => this.handleGalleryClick(false)}><FontAwesomeIcon icon={faChevronRight} size="4x" /></button>
+        <button className="gallery-button" onClick={() => this.handleGalleryClick(false)}><FontAwesomeIcon title="Right gallery Button" icon={faChevronRight} size="4x" /></button>
       </div>
     )
   }

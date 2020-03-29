@@ -229,9 +229,9 @@ class IndexPage extends React.Component {
               <h2 className="section__header">CONTACT US</h2>
               <p className="section__desc section__desc--wrap mt-4 mb-4">{data.contactDescription.value.value}</p>
               <div className="icons-wrapper">
-                <a className="icons-link" href={data.instagramLink.value.value}><FontAwesomeIcon icon={faInstagramSquare} size="4x" /></a>
-                <a className="icons-link mr-2 ml-2" href={data.facebookLink.value.value}><FontAwesomeIcon icon={faFacebookSquare} size="4x" /></a>
-                <a className="icons-link" href={"mailto: " + data.email.value.value}><FontAwesomeIcon icon={faEnvelope} size="4x" /></a>
+                <a className="icons-link" href={data.instagramLink.value.value}><FontAwesomeIcon title="Instagram" icon={faInstagramSquare} size="4x" /></a>
+                <a className="icons-link mr-2 ml-2" href={data.facebookLink.value.value}><FontAwesomeIcon title="Facebook" icon={faFacebookSquare} size="4x" /></a>
+                <a className="icons-link" href={"mailto: " + data.email.value.value}><FontAwesomeIcon title="E-mail" icon={faEnvelope} size="4x" /></a>
               </div>
             </div>
           </div>
