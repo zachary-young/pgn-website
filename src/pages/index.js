@@ -190,7 +190,7 @@ class IndexPage extends React.Component {
               <a href="http://www.phigammanu.com"><button className="section__button mt-2">VISIT WEBSITE</button></a>
             </div>
             <div className="section__main">
-              <Image loading="lazy" className="section__image" fluid={data.aboutPhoto.photo.fluid} alt="logo"/>
+              <Image loading="lazy" className="section__image" fluid={data.aboutPhoto.photo.fluid} alt="About photo"/>
             </div>
           </div>
         </section>
@@ -292,7 +292,7 @@ export const query = graphql`
           linkedinUrl
           headshot {
             fluid (maxWidth: 350) {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }
@@ -305,7 +305,7 @@ export const query = graphql`
           sector
           photo {
             fluid (maxWidth: 350) {
-              ...GatsbyContentfulFluid
+              ...GatsbyContentfulFluid_withWebp
             }
           }
         }
@@ -382,7 +382,7 @@ export const query = graphql`
   fragment contentfulPhotosFields on ContentfulPhotos {
     photo {
       fluid (maxWidth: 1920) {
-        ...GatsbyContentfulFluid
+        ...GatsbyContentfulFluid_withWebp
       }
     }
   }
