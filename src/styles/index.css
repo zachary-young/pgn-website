@@ -272,6 +272,8 @@ body {
 }
 
 .section__emphasis {
+    font-weight: 400;
+    font-style: italic;
     font-family: 'Merriweather', serif;
     font-size: 20pt;
 }
@@ -388,7 +390,7 @@ body {
 
 .event__title {
     font-size: 25pt;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0;
     font-family: 'Merriweather', serif;
     font-style: italic;
@@ -397,7 +399,7 @@ body {
 .event__subtitle {
     margin: 0;
     font-size: 16pt;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .event__desc {
