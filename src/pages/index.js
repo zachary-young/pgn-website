@@ -278,10 +278,18 @@ class IndexPage extends React.Component {
 export const query = graphql`
   query {
     background: contentfulPhotos(title: {eq: "background"}) {
-      ...contentfulPhotosFields
+      photo {
+        fluid (minHeight: 550) {
+          ...GatsbyContentfulFluid_withWebp
+        }
+      }
     }
     aboutPhoto: contentfulPhotos(title: {eq: "aboutPhoto"}) {
-      ...contentfulPhotosFields
+      photo {
+        fluid {
+          ...GatsbyContentfulFluid_withWebp
+        }
+      }
     }
     allContentfulBrothers {
       edges {
@@ -291,7 +299,7 @@ export const query = graphql`
           position
           linkedinUrl
           headshot {
-            fluid (maxWidth: 350) {
+            fluid {
               ...GatsbyContentfulFluid_withWebp
             }
           }
@@ -304,7 +312,7 @@ export const query = graphql`
           name
           sector
           photo {
-            fluid (maxWidth: 350) {
+            fluid {
               ...GatsbyContentfulFluid_withWebp
             }
           }
@@ -375,14 +383,6 @@ export const query = graphql`
     email: contentfulText(title:{eq: "email"}) {
       value {
         value
-      }
-    }
-  }
-  
-  fragment contentfulPhotosFields on ContentfulPhotos {
-    photo {
-      fluid (maxWidth: 1920) {
-        ...GatsbyContentfulFluid_withWebp
       }
     }
   }
