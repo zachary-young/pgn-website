@@ -285,7 +285,7 @@ export const query = graphql`
     }
     aboutPhoto: contentfulPhotos(title: {eq: "aboutPhoto"}) {
       photo {
-        fluid {
+        fluid (sizes: "(max-width: 750) 90vw, 50vw") {
           ...GatsbyContentfulFluid_withWebp
         }
       }
