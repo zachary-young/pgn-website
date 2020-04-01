@@ -70,7 +70,7 @@ class Gallery extends React.Component {
                 node {
                   index
                   photo {
-                    fluid(sizes: "(max-width: 750) 100vw, 50vw") {
+                    fluid(sizes: "(max-width: 750px) 100vw, 50vw") {
                       ...GatsbyContentfulFluid_withWebp
                     }
                   }

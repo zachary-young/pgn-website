@@ -278,14 +278,14 @@ export const query = graphql`
   query {
     background: contentfulPhotos(title: {eq: "background"}) {
       photo {
-        fluid (sizes: "(max-width: 400) 400px, 100vw"){
+        fluid (sizes: "(max-width: 400px) 400px, 100vw"){
           ...GatsbyContentfulFluid_withWebp
         }
       }
     }
     aboutPhoto: contentfulPhotos(title: {eq: "aboutPhoto"}) {
       photo {
-        fluid (sizes: "(max-width: 750) 100vw, 50vw") {
+        fluid (sizes: "(max-width: 750px) 100vw, 50vw") {
           ...GatsbyContentfulFluid_withWebp
         }
       }
@@ -298,7 +298,7 @@ export const query = graphql`
           position
           linkedinUrl
           headshot {
-            fluid (sizes: "(max-width: 400) 100vw, (max-width: 750) 50vw, (max-width: 1000) 33vw, 20vw") {
+            fluid (sizes: "(max-width: 400px) 100vw, (max-width: 750px) 50vw, (max-width: 1000px) 33vw, 20vw") {
               ...GatsbyContentfulFluid_withWebp
             }
           }
@@ -311,7 +311,7 @@ export const query = graphql`
           name
           sector
           photo {
-            fluid (sizes: "(max-width: 400) 100vw, (max-width: 750) 50vw, (max-width: 1000) 33vw, 20vw") {
+            fluid (sizes: "(max-width: 400px) 100vw, (max-width: 750px) 50vw, (max-width: 1000px) 33vw, 20vw") {
               ...GatsbyContentfulFluid_withWebp
             }
           }
